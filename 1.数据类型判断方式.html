@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据类型判断方式</title>
+</head>
+<body>
+<script>
+  /* 第一种 typeof */
+  // 原理：操作数类型,只能识别基础类型和引用类型
+
+  // 特殊情况
+  console.log(typeof null)          // object
+  console.log(typeof NaN)           // number
+  console.log(typeof document.all)  // undefined
+  // 注意：暂时性死区
+  function typeofTest(){
+    typeof a;    // 报错
+    let a = 10;
+  }
+
+  /* 第二种 constructor */
+  // 原理：根据原型链,constructor指向创建实例对象的构造函数
+
+  // 特殊情况
+  // null和undefined没有constructor
+
+  // 注意：constructor可以被认为重写,需要注意
+  String.prototype.constructor = function rewrite(){
+    return {}
+  }
+  console.log('a'.constructor)
+
+  /* 第三种 instanceof */
+  // 原理：根据原型链查找
+  // A instanceof B, 右操作数（B）必须是构造函数或者class
+  // 注意：多个全局对象，多个window，iframe嵌套
+
+  /* 第四种 isPrototypeOf */
+  // 原理：根据原型链查找
+  // A isProtypeOf B,能正常返回值的情况下等同于instanceof
+
+  /* 第五种 Object.prototype.toSting */
+  // 原理：通过函数动态this的特性，返回数据类型 ‘[object Date]’
+
+  // 自定义对象如何获取 [object MyArray]类型
+  class MyArray {
+    get [Symbol.toStringTag]() {
+      return 'MyArray'
+    }
+  }
+  let arr = new MyArray();
+  console.log(Object.prototype.toString.call(arr))
+
+  // Object.prototype.toString.call(Boolean.prototype)
+
+  /* 第六种 鸭子类型检查 */
+  // 原理：一个东西长得像鸭子,叫声像鸭子，就认为它是个鸭子
+  // eg: typeof value.then === 'function' && typeof value.catch === 'function'
+  // 候选方案
+
+  /* 第七种 Symbol.toStringTag */
+  // 原理：Object.prototype.toSting会读取该值
+
+  /* 第八种 等比较 */
+  // 原理：与某个固定值就行比较
+  // 适用于：undefined，window，document，null
+  // 原先undefine可被改写的处理方式
+  function  isUndefined(obj){
+    return obj === void 0;
+  }
+</script>
+</body>
+</html>
