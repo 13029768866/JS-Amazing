@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NaN</title>
+</head>
+<body>
+<script>
+    /* NaN 和 Number.NaN */
+    // 1、typeof的结果是number
+    console.log(typeof NaN);
+    console.log(typeof Number.NaN);
+    // 2、与自身不相等
+    console.log(NaN == NaN);
+    console.log(Number.NaN == Number.NaN);
+    // 3、不能被删除
+    console.log(Object.getOwnPropertyDescriptor(window, 'NaN'))
+
+    // 4、检测NaN方法
+    // 1) Number.isNaN
+    // 2) 自身比较
+    function isNaNVal(val){
+      return val !== val;
+    }
+    // 3) Object.is
+    function isNaNVal(val){
+      return Object.is(val, NaN)
+    }
+    // 4) typeof + NaN
+    function isNaNVal(val){
+      return typeof val === 'number' && isNaN(val)
+    }
+
+    // 5、本质
+    console.log('本质探寻----')
+    let arr = [NaN];
+    console.log(arr.indexOf(NaN))       // -1
+    console.log(arr.includes(NaN))      // true
+
+    // indexOf: 调用内部Number: equal
+    // includes: 调用内部Number: sameValueZero
+</script>
+</body>
+</html>
