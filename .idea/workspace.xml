@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10bc09a4-7657-4fbe-b9d1-994e56610cb6" name="变更" comment="feat(root): 千分位的集中实现方法">
-      <change afterPath="$PROJECT_DIR$/4.二元操作符+规则.html" afterDir="false" />
+    <list default="true" id="10bc09a4-7657-4fbe-b9d1-994e56610cb6" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/3.数值千分位实现方法.html" beforeDir="false" afterPath="$PROJECT_DIR$/3.数值千分位实现方法.html" afterDir="false" />
     </list>
@@ -38,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../0.Template/juncDT-admin" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -66,7 +65,9 @@
       <workItem from="1653356341945" duration="26000" />
       <workItem from="1653356376272" duration="5493000" />
       <workItem from="1653362703489" duration="10000" />
-      <workItem from="1653433663787" duration="1715000" />
+      <workItem from="1653433663787" duration="2737000" />
+      <workItem from="1653440711033" duration="71000" />
+      <workItem from="1653519859065" duration="1364000" />
     </task>
     <task id="LOCAL-00001" summary="feat(root): 8种数据类型判断方式">
       <created>1653346981793</created>
@@ -89,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653361928150</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat(root): 二元操作符+的规则">
+      <created>1653435483975</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653435483975</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +107,7 @@
     <MESSAGE value="feat(root): 8种数据类型判断方式" />
     <MESSAGE value="feat(root): NaN 和 Number.NaN的比较" />
     <MESSAGE value="feat(root): 千分位的集中实现方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(root): 千分位的集中实现方法" />
+    <MESSAGE value="feat(root): 二元操作符+的规则" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(root): 二元操作符+的规则" />
   </component>
 </project>

@@ -21,14 +21,14 @@
     console.log(typeof {}[Symbol.ToPrimitive])  // undifined
     console.log({}.valueOf())  // {}
     console.log({}.toString())  // '[object Object]'
-      // 2、一个操作数是string,都转化为string
-      // 3、否则两个操作数都转化为数字或者NaN,进行加法操作
+    // 2、一个操作数是string,都转化为string
+    // 3、否则两个操作数都转化为数字或者NaN,进行加法操作
 
-      /* 例子 */
-      console.log([]+[]);   // '[object Object]'
-      console.log([]+{});   // ''
-      console.log({}+[]);   // 解析为{};+[],{}解析为代码块,不是空对象。+[]结果为0
-      console.log({}+{});   // 谷歌解析为:'[object Object][object Object]'  IE解析为：NaN
+    /* 例子 */
+    console.log([]+[]);   // '[object Object]'
+    console.log([]+{});   // ''
+    console.log({}+[]);   // 解析为{};+[],{}解析为代码块,不是空对象。+[]结果为0
+    console.log({}+{});   // 谷歌解析为:'[object Object][object Object]'  IE解析为：NaN
 </script>
 </body>
 </html>
