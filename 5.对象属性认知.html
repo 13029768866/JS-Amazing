@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象属性认知</title>
+</head>
+<body>
+<script>
+    /* 对象属性 */
+    // 1、常规属性 对象elements里
+    // 键是string的属性,根据创建时的顺序
+    let obj = {};
+    obj.p8 ="str8";
+    obj.p5 ="str5";
+    obj.p7 ="str7";
+    for(let key in obj){
+      console.log('property:',key)
+    }
+
+    // 2、排序属性   对象properties里
+    // 键是number/数字字符串的属性,根据索引大小升序
+    obj[1] = 1;
+    obj[6] = 6;
+    obj[2] = 2;
+    for(let key in obj){
+      console.log('property:',key)
+    }
+</script>
+</body>
+</html>
