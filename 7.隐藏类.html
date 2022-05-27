@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隐藏类</title>
+</head>
+<body>
+<button id="btnAdd">添加性别</button>
+<script>
+    function MyObject(){
+      this.name = 'wzj';
+      this.age = 18;
+    }
+
+    let obj = new MyObject();
+    // 增加或者删除会破坏隐藏类
+    document.getElementById('btnAdd').addEventListener("click",() => {
+      obj.sex = "男"
+    })
+
+
+    /* 保护隐藏类 */
+    // 1、初始化时保持属性顺序一致
+    // 2、一次性初始化完毕（字面量声明,不要空对象挨个属性添加）
+    // 3、谨慎使用delete
+</script>
+</body>
+</html>

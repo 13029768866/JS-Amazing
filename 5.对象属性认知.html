@@ -25,6 +25,33 @@
     for(let key in obj){
       console.log('property:',key)
     }
+
+    // 3、静态属性
+    // eg: Object.assign
+
+    // 4、原型属性
+    // eg: Object.prototype.toString
+
+    // 5、实例属性
+    class Person {
+      constructor (name,age) {
+        this.name = name;
+        this.age = age;
+      }
+      getName = () => {
+        return this.name;
+      }
+      getAge(){
+        return this.age;
+      }
+    }
+
+    const hasOwn = Object.hasOwnProperty;
+    const print = console.log;
+
+    let person = new Person();
+    print('getName', hasOwn.call(person, 'getName'));    // true,实例方法
+    print('getAge', hasOwn.call(person, 'getAge'));      // false,原型方法
 </script>
 </body>
 </html>
